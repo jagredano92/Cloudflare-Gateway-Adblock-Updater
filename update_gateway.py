@@ -190,6 +190,7 @@ def should_update_filter(filter_config: Dict, cached_rules: List[Dict]) -> tuple
     
     # Check if precedence matches
     target_precedence = filter_config.get('priority')
+    target_precedence = 1000
     current_precedence = policy.get('precedence')
     
     if target_precedence is not None and current_precedence != target_precedence:
@@ -536,7 +537,7 @@ def update_policy_for_filter(filter_config: Dict, final_list_ids: List[str],
         "enabled": True,
         "filters": ["dns"],
         "name": policy_name,
-        "precedence": priority,
+        "precedence": 1000,
         "traffic": expression
     }
 
