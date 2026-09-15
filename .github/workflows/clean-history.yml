@@ -17,4 +17,4 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           days-ago: 7
-          dry-run: true     # Set to false when ready to permanently delete
+          dry-run: false     # Set to false when ready to permanently delete
